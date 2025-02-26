@@ -9,6 +9,7 @@ import {
   Edit,
   Facebook,
   Fingerprint,
+  FolderOpenDot,
   House,
   Instagram,
   LayoutDashboard,
@@ -53,6 +54,7 @@ export const ICONS = {
   EDIT: Edit,
   BOOKMARK: Bookmark,
   PLUS: Plus,
+  FOLDER: FolderOpenDot,
 
   //Social Icons
   FACEBOOK: Facebook,

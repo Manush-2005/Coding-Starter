@@ -43,7 +43,7 @@ export default function ProposalAnalysisPage({
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto p-6 space-y-6">
+      <div className="container p-6 mx-auto space-y-6">
         <h2 className="text-3xl font-bold tracking-tight">Proposal Analysis</h2>
 
         <Collapsible
@@ -51,8 +51,8 @@ export default function ProposalAnalysisPage({
           onOpenChange={setIsOpen}
           className="w-[300px] space-y-2"
         >
-          <div className="p-4 rounded-lg space-y-2 justify-between items-center">
-            <div className="flex justify-between items-center">
+          <div className="items-center justify-between p-4 space-y-2 rounded-lg">
+            <div className="flex items-center justify-between">
               <Brain />
               Show AI Thinking Process
               <CollapsibleTrigger asChild>
@@ -90,9 +90,9 @@ export default function ProposalAnalysisPage({
         <div className="grid gap-6 md:grid-cols-2">
           {/* Positive Points Card */}
           <Card className="overflow-hidden">
-            <CardHeader className="bg-gradient-to-r from-green-500/10 to-green-500/5 pb-4">
+            <CardHeader className="pb-4 bg-gradient-to-r from-green-500/10 to-green-500/5">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-green-500" />
+                <CheckCircle2 className="w-5 h-5 text-green-500" />
                 <CardTitle>Why Choose This Freelancer?</CardTitle>
               </div>
             </CardHeader>
@@ -101,7 +101,7 @@ export default function ProposalAnalysisPage({
                 {goodpoints.goodPoints.map((goodpoint, index) => {
                   return (
                     <li className="flex items-start gap-2" key={index}>
-                      <CheckCircle2 className="mt-1 h-4 w-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 mt-1 text-green-500" />
                       <span>{goodpoint}</span>
                     </li>
                   );
@@ -112,9 +112,9 @@ export default function ProposalAnalysisPage({
 
           {/* Negative Points Card */}
           <Card className="overflow-hidden">
-            <CardHeader className="bg-gradient-to-r from-red-500/10 to-red-500/5 pb-4">
+            <CardHeader className="pb-4 bg-gradient-to-r from-red-500/10 to-red-500/5">
               <div className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5 text-red-500" />
+                <AlertCircle className="w-5 h-5 text-red-500" />
                 <CardTitle>Potential Obstacles</CardTitle>
               </div>
             </CardHeader>
@@ -123,7 +123,7 @@ export default function ProposalAnalysisPage({
                 {badpoints.badPoints.map((badpoint, index) => {
                   return (
                     <li className="flex items-start gap-2" key={index}>
-                      <CheckCircle2 className="mt-1 h-4 w-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 mt-1 text-green-500" />
                       <span>{badpoint}</span>
                     </li>
                   );
@@ -135,23 +135,23 @@ export default function ProposalAnalysisPage({
 
         {/* Bottom full-width score card */}
         <Card className="overflow-hidden">
-          <CardHeader className="bg-gradient-to-r from-blue-500/10 to-blue-500/5 pb-4">
+          <CardHeader className="pb-4 bg-gradient-to-r from-blue-500/10 to-blue-500/5">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Trophy className="h-5 w-5 text-blue-500" />
+                <Trophy className="w-5 h-5 text-blue-500" />
                 <CardTitle>Overall Score</CardTitle>
               </div>
               <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                 <DialogTrigger asChild>
                   <Button variant="outline" className="flex items-center gap-2">
-                    <Info className="h-4 w-4" />
+                    <Info className="w-4 h-4" />
                     See our scoring criteria
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[600px] bg-white">
                   <DialogHeader>
                     <DialogTitle className="flex items-center gap-2 text-xl">
-                      <Trophy className="h-5 w-5 text-blue-500" />
+                      <Trophy className="w-5 h-5 text-blue-500" />
                       AI Scoring System
                     </DialogTitle>
                     <DialogDescription>
@@ -164,7 +164,7 @@ export default function ProposalAnalysisPage({
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Brain className="h-5 w-5 text-purple-500" />
+                            <Brain className="w-5 h-5 text-purple-500" />
                             <h4 className="font-semibold">Skills Match</h4>
                           </div>
                           <span className="font-semibold text-purple-500">
@@ -185,7 +185,7 @@ export default function ProposalAnalysisPage({
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Briefcase className="h-5 w-5 text-blue-500" />
+                            <Briefcase className="w-5 h-5 text-blue-500" />
                             <h4 className="font-semibold">Experience Level</h4>
                           </div>
                           <span className="font-semibold text-blue-500">
@@ -206,7 +206,7 @@ export default function ProposalAnalysisPage({
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <MessageSquare className="h-5 w-5 text-green-500" />
+                            <MessageSquare className="w-5 h-5 text-green-500" />
                             <h4 className="font-semibold">
                               Answering Capabilities
                             </h4>
@@ -229,7 +229,7 @@ export default function ProposalAnalysisPage({
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Coins className="h-5 w-5 text-yellow-500" />
+                            <Coins className="w-5 h-5 text-yellow-500" />
                             <h4 className="font-semibold">Pricing</h4>
                           </div>
                           <span className="font-semibold text-yellow-500">
@@ -253,13 +253,13 @@ export default function ProposalAnalysisPage({
           </CardHeader>
           <CardContent className="pt-6">
             <div className="flex flex-col items-center">
-              <div className="relative flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-600 ">
-                <div className="absolute h-36 w-36 rounded-full bg-white"></div>
+              <div className="relative flex items-center justify-center w-40 h-40 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 ">
+                <div className="absolute bg-white rounded-full h-36 w-36"></div>
                 <span className="relative text-5xl font-bold text-blue-500">
                   {scoringjson.final_score}
                 </span>
               </div>
-              <div className="mt-6 text-center text-sm text-muted-foreground max-w-2xl">
+              <div className="max-w-2xl mt-6 text-sm text-center text-muted-foreground">
                 <p>{scoringjson.reason_explanation}</p>
               </div>
             </div>

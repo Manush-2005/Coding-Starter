@@ -2,7 +2,7 @@ import { ICONS } from "@/assets/icons/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navigate = ({ name, item }) => {
+const Navigate = ({ name, item, path }) => {
   return (
     <>
       {/* Breadcrumb Navigation */}
@@ -13,15 +13,12 @@ const Navigate = ({ name, item }) => {
         >
           <li>
             <Link to="/" className="text-sm font-medium text-gray-900">
-              <ICONS.HOME size={20}/>
+              <ICONS.HOME size={20} />
             </Link>
           </li>
           <li>
             <span className="mx-2 text-gray-400">/</span>
-            <Link
-              to={`/${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-900"
-            >
+            <Link to={`/${path}`} className="text-sm font-medium text-gray-900">
               {name}
             </Link>
           </li>

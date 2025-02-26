@@ -203,7 +203,7 @@ const Navbar = () => {
               </div>
             </PopoverPanel>
           </Popover>
-{/* 
+          {/* 
           <Link
             to="/"
             className="font-semibold text-black text-sm/6 hover:text-helper"
@@ -268,12 +268,12 @@ const Navbar = () => {
                   <MenuItem>
                     <div className="text-text data-[focus]:bg-gray-100 data-[focus]:outline-none flex items-center justify-between">
                       <Link
-                        to="/dashboard"
+                        to="/my-projects"
                         className="block px-4 py-2 text-sm text-text data-[focus]:bg-gray-100 data-[focus]:outline-none"
                       >
-                        My Dashboard
+                        All Projects
                       </Link>
-                      <ICONS.DASHBOARD size={25} className="mr-3" />
+                      <ICONS.FOLDER size={25} className="mr-3" />
                     </div>
                   </MenuItem>
                   <MenuItem>
