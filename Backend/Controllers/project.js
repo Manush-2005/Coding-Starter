@@ -84,3 +84,24 @@ export const getAllProposalsOfProject = async (req, res) => {
       res.status(500).json({ message: "Error Occurred !!!" });
     });
 };
+
+export const hireFreelancerForProject = async(req, res) => {
+  const { pId, fId} = req.params;
+  const project = await Project.findById(pId);
+
+  if (!project) {
+    return res.status(404).json({ message: "Project does not exist" });
+  }
+
+  project.hiredPerson = fId;
+
+  project
+    .save()
+    .then(() => {
+      res.status(200).json({ message: "success"});
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Error Occurred !!!" });
+    });
+
+}

@@ -20,6 +20,7 @@ import {
   createProject,
   getAllProposalsOfProject,
   getProject,
+  hireFreelancerForProject,
 } from "./Controllers/project.js";
 import {
   checkIfUserExists,
@@ -72,6 +73,7 @@ app.get("/project/:id", getProject);
 app.post("/project/add", createProject);
 app.post("/project/:id/add-proposal", addProposalToProject);
 app.get("/project/:id/proposals", getAllProposalsOfProject);
+app.get("/project/:pId/freelancer/:fId/hire", hireFreelancerForProject);
 
 // Proposal Routes
 app.get("/proposal/:id", getProposal);

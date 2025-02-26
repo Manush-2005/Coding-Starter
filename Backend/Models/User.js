@@ -114,6 +114,14 @@ let userSchema = new mongoose.Schema({
     ],
     default: [],
   },
+  pending_amount: {
+    type: Number,
+    default: 0
+  },
+  withdrawable_amount: {
+    type: Number,
+    default: 0
+  }
 });
 
 export const userSchemaValidation = joi.object({

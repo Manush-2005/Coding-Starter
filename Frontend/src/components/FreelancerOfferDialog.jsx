@@ -92,6 +92,15 @@ const FreelancerOfferDialog = ({
     );
   };
 
+  const hireFreelancerForProject = async() => {
+    try {
+      await axios.get(`http://localhost:3000/project/${project._id}/freelancer/${freelancer._id}/hire`);
+    } 
+    catch(err) {
+      console.log(err);
+    }
+  }
+
   const handleStatusUpdate = async (newStatus) => {
     // Decline or accepted route par call.
     try {
@@ -236,6 +245,7 @@ const FreelancerOfferDialog = ({
                 className="flex-1"
                 onClick={(e) => {
                   sendEmail(e); 
+                  hireFreelancerForProject();
                   handleStatusUpdate("accepted");
                 }}
               >
